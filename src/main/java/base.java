@@ -16,7 +16,7 @@ public class base {
     public WebDriver initializeDriver() throws IOException {
 
         Properties properties = new Properties();
-        String path = "D:\\Coding\\Automation Project\\TESTNG DEMO 2\\Maven project\\QAClickAcademyTesting\\src\\main\\java\\data.properties";
+        String path = "D:\\Coding\\Automation Project\\TESTNG DEMO 2\\Maven project\\QAClickAcademyTesting\\src\\main\\resources\\data.properties";
         FileInputStream fileInputStream = new FileInputStream(path);
         properties.load(fileInputStream);
         String browsername = properties.getProperty("browser");
@@ -31,7 +31,7 @@ public class base {
             System.setProperty("webdriver.chrome.driver", "D:\\Programming Related Software\\Selenium\\Internet Explorer\\IEDriverServer.exe");
             driver = new InternetExplorerDriver();
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
         return driver;
     }
