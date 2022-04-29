@@ -33,6 +33,8 @@ public class LandingPage {
     WebElement about;
     @FindBy(xpath = "//a[normalize-space()='Contact']")
     WebElement contact;
+    @FindBy(xpath = "//h2[normalize-space()='Featured Courses']")
+    WebElement title;
 
     public WebElement getRegister (){
         return register;
@@ -63,5 +65,8 @@ public class LandingPage {
     }
     public WebElement getContact(){
         return contact;
+    }
+    public WebElement getTitle(){
+        return title;
     }
 }
