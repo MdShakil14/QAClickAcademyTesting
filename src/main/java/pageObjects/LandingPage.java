@@ -36,6 +36,13 @@ public class LandingPage {
     @FindBy(xpath = "//h2[normalize-space()='Featured Courses']")
     WebElement title;
 
+    @FindBy(xpath = "//img[@alt='Medianh Consulting - HTML Template']")
+    WebElement icon;
+
+    public  WebElement getIcon(){
+        return icon;
+    }
+
     public WebElement getRegister (){
         return register;
     }

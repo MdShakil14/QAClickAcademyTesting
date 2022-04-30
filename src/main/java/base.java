@@ -12,10 +12,11 @@ import java.util.Properties;
 
 public class base {
     public WebDriver driver;
+    public Properties properties = new Properties();
 
     public WebDriver initializeDriver() throws IOException {
 
-        Properties properties = new Properties();
+
         String path = "D:\\Coding\\Automation Project\\TESTNG DEMO 2\\Maven project\\QAClickAcademyTesting\\src\\main\\resources\\data.properties";
         FileInputStream fileInputStream = new FileInputStream(path);
         properties.load(fileInputStream);
